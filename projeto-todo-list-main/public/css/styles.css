@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+   --bg-darkmode: #141f2f;
+   --bg-lightmode: #e3e7ee;
+
+   --font-darkmode: #b7b7b7;
+   --font-lightmode: #263956;
+
+   --item-darkmode: #25273c;
+   --item-lightmode: #f7f5f5;
+
+   --check-darkmode: #182233;
+   --check-lightmode: #d1d5db;
+}
+
+
+body { 
+    display: flex;
+    justify-content: space-around;
+    background-image: url("../images/header.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: var(--bg-lightmode);
+    font-family: 'Ubunto', sans-serif;
+    color: #fff;
+    margin: 0;
+}
+
+
+.container { 
+   margin-top:  230px;
+   width: 500px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    flex-grow: 0;
+}
+
+.darkmode-toggle { 
+   width: 30px;
+   height: 30px;
+   background-image: url('../images/moon.svg');
+   background-position: center;
+   background-repeat: no-repeat;
+   flex-grow: 0;
+}
+
+input[type=text] {
+    padding: 20px 10px;
+    font-size: 22px;
+    width: calc(100% - 20px);
+    border: none;
+    margin-bottom: 40px;
+    background-color: var(--item-lightmode);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background-color: var(--item-lightmode);
+    color: var(--font-lightmode);
+    padding: 10px;
+    height: 45px;
+    font-size: 22px;
+    border-bottom: solid 1px #d1d5db;
+}
+
+input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;   
+}
+
+input[type=checkbox]::before{
+    color: "";
+    display: block ;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    background-color: var(--check-lightmode);
+
+}
+
+input[type=checkbox]:checked::before {
+    background-color: #1e80ef;
+
+}
+
+
+
+input[type=checkbox]:checked::after {
+    content: "";
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: 9px;
+
+}
+
+.item-checked {
+    text-decoration: line-through;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--item-lightmode);
+    color: var(--font-lightmode);
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+.footer div {
+    margin: 0 5px;
+}
+
+.footer a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--font-lightmode);
+}
+
+.footer a:hover {
+    color: #8ac2fe;
+}
+
+.footer a.active {
+    color: #116acc;
+}
+
+body.darkmode {
+background-color: var(--bg-darkmode);
+}
+
+.darkmode .darkmode-toggle { 
+   background-image: url('../images/sun.svg');
+}
+
+.darkmode input [type=text],
+.darkmode .item,
+.darkmode .footer {
+  background-color: var(--item-darkmode);
+  color: var(--font-darkmode);
+}
+
+.darkmode input[type=checkbox]:before {
+     background-color: var(--check-darkmode);
+}
+
+.darkmode input[type=checkbox]:checked:before {
+    background-color: #1e80ef;
+}
+
+.darkmode a {
+    color: var(--font-darkmode);
+
+}
+
+@media (max-width: 600) {
+    div.container {
+        margin-top: 150px;
+        width: 90%;
+    
+    }
+
+    .footer {
+        padding: 10px 0;
+        font-size: 10px;
+        gap: 6px;
+
+    }
+}
+
