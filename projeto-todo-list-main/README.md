@@ -32,6 +32,7 @@ HTML5
 CSS3
 JavaScript (Vanilla JS)
 LocalStorage API
+
 📂 Estrutura do projeto
 todo-list/
 │
@@ -43,6 +44,7 @@ todo-list/
     ├── js/
     │   └── script.js
     └── images/
+
 🧠 Aprendizados
 
 Durante o desenvolvimento deste projeto foram praticados:
@@ -53,9 +55,12 @@ Arrays e objetos em JavaScript
 JSON.stringify / JSON.parse
 Persistência de estado no navegador
 Organização de código e estrutura de projeto
+
 ▶️ Como executar o projeto
 Clone o repositório
+
 git clone https://github.com/seu-usuario/todo-list-javascript.git
+
 Abra a pasta do projeto
 Execute o arquivo:
 index.html
